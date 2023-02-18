@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import store from './store'
 import vuetify from './plugins/vuetify'
+import '@mdi/font/css/materialdesignicons.css'
 import { loadFonts } from './plugins/webfontloader'
 import router from './router'
 
