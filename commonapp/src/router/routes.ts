@@ -20,33 +20,10 @@ export const routes: Array<RouteConfig> = [
                 name: 'Home',
                 component: () => import("@/pages/home/HomePage.vue"),
                 meta: (route: Route) => ({
-                    title: 'پنل مدیریت کافی شاپ',
+                    title: 'اپلیکیشن مشترک',
                     middleware: auth,
                     route
                 })
-            },
-
-            {
-                path: 'comments',
-                name: 'Comments',
-                component: () => import("@/pages/home/CommentsPage.vue"),
-                meta: (route: Route) => ({
-                    title: 'نظرات',
-                    middleware: auth,
-                    route,
-                    hasBack: true
-                }),
-            },
-            {
-                path: 'tickets',
-                name: 'Tickets',
-                component: () => import("@/pages/home/TicketsPage.vue"),
-                meta: (route: Route) => ({
-                    title: 'تیکت ها',
-                    middleware: auth,
-                    route,
-                    hasBack: true
-                }),
             },
             {
                 path: 'settings',
@@ -57,60 +34,6 @@ export const routes: Array<RouteConfig> = [
                     middleware: auth,
                     route,
                     hasBack: true
-                })
-            }, {
-                path: 'groups',
-                name: 'Groups',
-                component: () => import("@/pages/home/GroupsPage.vue"),
-                meta: (route: Route) => ({
-                    title: 'گروه ها',
-                    middleware: auth,
-                    route,
-                    hasBack: true
-                }),
-            },
-            {
-                path: 'stores',
-                name: 'Stores',
-                component: () => import('@/pages/home/CoffeeShopsPage.vue'),
-                meta: (route: Route) => ({
-                    title: 'کافی شاپ ها',
-                    middleware: auth,
-                    route,
-                    hasBack: true,
-                }),
-            },
-            {
-                path: 'products',
-                name: 'Products',
-                component: () => import('@/pages/home/ProductsPage.vue'),
-                meta: (route: Route) => ({
-                    title: 'محصولات',
-                    middleware: auth,
-                    route,
-                    hasBack: true,
-                }),
-            },
-            {
-                path: 'productSellers',
-                name: 'ProductSellers',
-                component: () => import('@/pages/product/Sellers.vue'),
-                meta: (route: Route) => ({
-                    title: `فروشندگان ${route.query.name}`,
-                    middleware: auth,
-                    route,
-                    hasBack: true,
-                }),
-            },
-            {
-                path: '/store/detail',
-                name: 'StoreDetail',
-                component: () => import("@/pages/store/detail.vue"),
-                meta: (route: Route) => ({
-                    title: `جزئیات ${route.query.name}`,
-                    middleware: auth,
-                    route,
-                    hasBack: true,
                 })
             },
             {

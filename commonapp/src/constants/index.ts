@@ -8,27 +8,6 @@ export const navigationItems = [
         to: '/tabs/home'
     },
     {
-        id: 2,
-        title: 'گروه ها',
-        icon: 'mdi-group',
-        to: '/tabs/groups',
-        active: false,
-    },
-    {
-        id: 3,
-        title: 'کافی شاپ ها',
-        icon: 'mdi-store',
-        to: '/tabs/stores',
-        active: false,
-    },
-    {
-        id: 4,
-        title: 'محصولات',
-        icon: 'mdi-shopping',
-        to: '/tabs/products',
-        active: false,
-    },
-    {
         id: 5,
         title: 'نظرات',
         icon: 'mdi-comment-multiple',

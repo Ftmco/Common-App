@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { dialog } from './app/dialog'
-import { snackBar } from './app/snackBar'
-import { user } from './app/user'
-import { loading } from './app/loading'
-import { stepper } from './app/stepper'
+import { dialog } from './modules/dialog'
+import { snackBar } from './modules/snackBar'
+import { user } from './modules/user'
+import { loading } from './modules/loading'
+import { stepper } from './modules/stepper'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
