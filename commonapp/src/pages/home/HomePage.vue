@@ -54,22 +54,13 @@
 </template>
 
 <script lang="ts">
-import { checkAccess } from "@/api/apis/account.api";
 import AppSparkline from "@/components/core/AppSparkline.vue";
-import router from "@/router";
-import Vue from "vue";
-export default Vue.extend({
+import { defineComponent } from "@vue/composition-api";
+
+export default defineComponent({
   components: { AppSparkline },
-  beforeCreate() {
-    checkAccess("AdminHome").then((access) => {
-      if (access.status) {
-        if (access.result.hasAccess != true)
-          router.push({ name: "AccessDenied" });
-      }
-    });
-  },
-  data: () => ({
-    month: [
+  setup() {
+    const month = [
       "فروردین",
       "اردیبهشت",
       "خرداد",
@@ -82,15 +73,17 @@ export default Vue.extend({
       "دی",
       "بهمن",
       "اسفند",
-    ],
-    bestStores: [
+    ];
+    const bestStores = [
       "کافه تهران",
       "رستوران بام",
       "کافه بروبچ",
       "قهوه ترک",
       "کافه تنها",
       "رستوران سنتی",
-    ],
-  }),
+    ];
+
+    return { month, bestStores };
+  },
 });
 </script>
