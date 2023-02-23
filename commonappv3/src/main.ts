@@ -4,10 +4,11 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
+import { createPinia } from 'pinia'
 
 loadFonts()
 
-createApp(App)
+createApp(App).use(createPinia())
   .use(router)
   .use(store)
   .use(vuetify)
